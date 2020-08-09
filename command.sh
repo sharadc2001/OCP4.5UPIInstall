@@ -1,0 +1,2 @@
+yum install genisoimage-1.1.11-25.el7.x86_64 -y 
+mkisofs -U -A  rhcos-4.5.2-modified -V  rhcos-4.5.2-modified -volset  rhcos-4.5.2-modified -J -joliet-long -r -v -T -x ./lost-found -o ~/rhcos-4.5.2-modified.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e images/efiboot.img -no-emul-boot .
